@@ -85,7 +85,7 @@ print("My Solution: ALL TESTS PASSED!")
 
 # Educative.io Solution
 # HashMap to keep track of the freq of each character in the window
-# When shrinking the window, keep moving the start to the right while decrementing the freq count until we have less than k characters in the map
+# When shrinking the window, keep moving the start to the right while decrementing the freq count until we have k characters in the map
 # Time Complexity: O(N) - while loop processes each character only once - O(N + N) = O(N)
 # Space Complexity: O(K)
 def longest_substring_with_k_distinct(s, k):
