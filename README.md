@@ -36,7 +36,7 @@ To make the best use of this repository, follow these steps:
 1. Clone the repository to your local machine:
 
    ```shell
-   git clone https://github.com/tiingweii-shii/Grokking-the-Coding-Interview-Patterns.git
+   git clone https://github.com/tiingweii-shii/Grokking-Coding-Interview-Patterns.git
    ```
 
 2. Browse through the patterns directories to find solutions to specific coding problems.
