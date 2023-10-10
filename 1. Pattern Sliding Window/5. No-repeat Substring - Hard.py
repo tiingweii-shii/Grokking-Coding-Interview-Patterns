@@ -2,8 +2,9 @@
 # Sliding Windows - Hard
 
 '''
-Problem Statement # Given a string, find the length of the longest
-substring which has no repeating characters.
+Problem Statement #
+Given a string, find the length of the longest substring which has no
+repeating characters.
 
 Example 1:
 Input: String="aabccbb"
