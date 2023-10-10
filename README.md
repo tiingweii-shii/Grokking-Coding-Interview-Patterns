@@ -43,7 +43,7 @@ To make the best use of this repository, follow these steps:
 
 3. Open the Python scripts using your preferred code editor or IDE.
 
-4. Try the problem on your own or review the code, comments, and explanations to understand the solution for each problem.
+4. Try the problem on your own, then review the code, comments, and explanations to understand the solution for each problem.
 
 5. Experiment with the code, modify it, and use it as a reference for your coding interview preparation.
 
