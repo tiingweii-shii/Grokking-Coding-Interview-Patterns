@@ -141,7 +141,7 @@ def length_of_longest_substring_educative(s, k):
 def test_educative_solution():
     for i in range(len(strings)):
         output = length_of_longest_substring_educative(strings[i], ks[i])
-        assert output == expected_outputs[i], "Output: " + str(output) + " string " + strings[i] + " k:" + str(ks[i]) + " should return " + str(expected_outputs[i])
+        assert output == expected_outputs[i], "Test" + str(i) + " Output: " + str(output) + " string " + strings[i] + " k:" + str(ks[i]) + " should return " + str(expected_outputs[i])
     print("Educative.io Solution: ALL TESTS PASSED!")
 test_educative_solution()
 
