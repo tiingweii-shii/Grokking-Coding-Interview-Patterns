@@ -75,29 +75,24 @@ expected_outputs = [output1, output2, output3, output4, output5, output6, output
 # - Because we know our window has the right size at every iteration, we can safely return True if we have the correct number of matches
 # - Keeping track of 'matched' can help us avoid checking the frequency of each char in the map - the frequency can go to negative, but that
 #   makes it impossible for the 'matched' to reach the correct number because we have a fixed window size
+import collections
 def find_permutation(s, pattern):
-    def get_pattern_map(pattern):
-        char_freq = {}
-        for char in pattern:
-            if char not in char_freq:
-                char_freq[char] = 0
-            char_freq[char] += 1
-        return char_freq
-    pattern_map = get_pattern_map(pattern)
-    start, matched = 0, 0
-
+    matched = 0
+    start = 0
+    hashmap = collections.Counter(pattern)
+    
     for end in range(len(s)):
-        if s[end] in pattern_map:
-            pattern_map[s[end]] -= 1
-            if pattern_map[s[end]] == 0:
+        if s[end] in hashmap:
+            hashmap[s[end]] -= 1
+            if hashmap[s[end]] == 0:
                 matched += 1
-                if matched == len(pattern_map):
+                if matched == len(hashmap):
                     return True
-        if end - start + 1 >= len(pattern):
-            if s[start] in pattern_map:
-                pattern_map[s[start]] += 1
-                if pattern_map[s[start]] == 1:
+        if end - start + 1 == len(pattern):
+            if s[start] in hashmap:
+                if hashmap[s[start]] == 0:
                     matched -= 1
+                hashmap[s[start]] += 1
             start += 1
     return False
 
